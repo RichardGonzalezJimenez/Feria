@@ -3,7 +3,7 @@ package feria;
 
 import java.util.Date;
 
-//este es un nuevo comentario 
+//Este es un nuevo comentario 
 
 public class Feria { 
     
@@ -13,6 +13,13 @@ public class Feria {
     private String especialidad;//tipo de distraccion.
     private int numeroDePersonas;
     private Boolean nacional;
+    private boolean internacional;
+    private boolean internacionalal;
+    private boolean getInternacional;
+
+    private Feria(String dead_amazing, int par, Date date, String juegos_mecanicos, boolean par1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public int getNumeroDePersonas() {
         return numeroDePersonas;
@@ -23,12 +30,7 @@ public class Feria {
     }
     
 public Feria(
-            String nombre, 
-            int numeroDeTrabajadores,
-            Date fechaDeApertura,
-            String especialidad,
-            int numeroDePersonas,
-            Boolean nacional) {
+        String nombre, int numeroDeTrabajadores, Date fechaDeApertura, String especialidad, int numeroDePersonas, Boolean nacional) {
         this.nombre = nombre;
         this.numeroDeTrabajadores = numeroDeTrabajadores;
         this.fechaDeApertura = fechaDeApertura;
@@ -36,7 +38,15 @@ public Feria(
         this.numeroDePersonas = numeroDePersonas;
         this.nacional = nacional;
     }
-    
+
+private void ampliarPlanta() {
+        this.numeroDeTrabajadores += 100;
+    }
+
+private boolean getInternacional() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     //el metodo crea una publicidad de promocion para aumentar los ingresos 
     //economicos base a mayor ingresos de personas en el pais o ciudad.
     public void atraerPersonas(){
@@ -52,6 +62,7 @@ public Feria(
         this.especialidad = nuevaEspecialidad;
         this.numeroDePersonas += 15;
     }
+    
     
     public String getNombre() {
         return nombre;
@@ -97,7 +108,29 @@ public Feria(
     
     
     public static void main(String[] args) {
-       
+        Feria feriaUno;
+        feriaUno = new Feria(
+                "Dead amazing",
+                200,
+                new Date(),
+                "juego mecanico", 
+                false );
+        Feria feriaDos = new Feria(
+                "the curb of the dead",
+                100,
+                new Date(),
+                "juego mecanico",
+                true); 
+        
+        System.out.println(feriaUno.getNombre());
+        System.out.println(feriaUno.getNumeroDeTrabajadores());
+        System.out.println(feriaUno.getInternacional());
+        
+        feriaUno.ampliarPlanta();
+        
+        System.out.println(feriaUno.getNombre());
+        System.out.println(feriaUno.getNumeroDeTrabajadores());
+        System.out.println(feriaUno.getInternacional());
+        
     }
-
-} 
+    }
