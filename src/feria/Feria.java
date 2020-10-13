@@ -29,6 +29,7 @@ public class Feria {
         this.numeroDePersonas = numeroDePersonas;
     }
     
+    //Este es el constructor de clase 
 public Feria(
         String nombre, int numeroDeTrabajadores, Date fechaDeApertura, String especialidad, int numeroDePersonas, Boolean nacional) {
         this.nombre = nombre;
@@ -63,7 +64,7 @@ private boolean getInternacional() {
         this.numeroDePersonas += 15;
     }
     
-    
+    //apartir de esta linea se encuentran los metodos de get y set 
     public String getNombre() {
         return nombre;
     }
