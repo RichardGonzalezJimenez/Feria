@@ -7,11 +7,11 @@ import java.util.Date;
 
 public class Feria { 
     
-    private String nombre;
-    private int numeroDeTrabajadores;
-    private Date fechaDeApertura;
-    private String especialidad;//tipo de distraccion.
-    private int numeroDePersonas;
+    private String nombre; //Este es el nombre de la FERIA
+    private int numeroDeTrabajadores; //Trabajadores contratados 
+    private Date fechaDeApertura; //Fecha en la que se fundó la FERIA
+    private String especialidad; //tipo de distraccion.
+    private int numeroDePersonas; //Personas que etran a las Aracciones Mecanicas 
     private Boolean nacional;
     private boolean internacional;
     private boolean internacionalal;
