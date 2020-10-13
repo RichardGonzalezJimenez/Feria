@@ -29,7 +29,7 @@ public class Feria {
         this.numeroDePersonas = numeroDePersonas;
     }
     
-    //Este es el constructor de clase 
+    //Este es el constructor de clase
 public Feria(
         String nombre, int numeroDeTrabajadores, Date fechaDeApertura, String especialidad, int numeroDePersonas, Boolean nacional) {
         this.nombre = nombre;
