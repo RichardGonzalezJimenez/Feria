@@ -13,14 +13,27 @@ public class Feria {
     private String especialidad; //tipo de distraccion.
     private int numeroDePersonas; //Personas que etran a las Aracciones Mecanicas 
     private Boolean nacional;
-    private boolean internacional;
-    private boolean internacionalal;
-    private boolean getInternacional;
+    
+    //Composicion y Agregacion
+    private Tickets entrada = null;
+    private Juegos juegosMecanicos;
 
-    private Feria(String dead_amazing, int par, Date date, String juegos_mecanicos, boolean par1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Tickets getEntrada() {
+        return entrada;
     }
 
+    public void setEntrada(Tickets entrada) {
+        this.entrada = entrada;
+    }
+
+    public Juegos getJuegosMecanicos() {
+        return juegosMecanicos;
+    }
+
+    public void setJuegosMecanicos(Juegos juegosMecanicos) {
+        this.juegosMecanicos = juegosMecanicos;
+    }
+    
     public int getNumeroDePersonas() {
         return numeroDePersonas;
     }
@@ -38,6 +51,7 @@ public Feria(
         this.especialidad = especialidad;
         this.numeroDePersonas = numeroDePersonas;
         this.nacional = nacional;
+        this.juegosMecanicos = new Juegos("la rueda y el 360", "juegos fuertes", true);
     }
 
 private void ampliarPlanta() {
@@ -115,23 +129,21 @@ private boolean getInternacional() {
                 200,
                 new Date(),
                 "juego mecanico", 
+                20,
                 false );
-        Feria feriaDos = new Feria(
-                "the curb of the dead",
-                100,
-                new Date(),
-                "juego mecanico",
-                true); 
         
-        System.out.println(feriaUno.getNombre());
-        System.out.println(feriaUno.getNumeroDeTrabajadores());
-        System.out.println(feriaUno.getInternacional());
+        Tickets boletos = new Tickets(30000, 
+                110988650, 
+                false);
         
-        feriaUno.ampliarPlanta();
+        feriaUno.setEntrada(boletos);
         
-        System.out.println(feriaUno.getNombre());
-        System.out.println(feriaUno.getNumeroDeTrabajadores());
-        System.out.println(feriaUno.getInternacional());
-        
+        System.out.println("Precio:");
+        System.out.println(feriaUno.getEntrada().getPrecios());
+        System.out.println("Cedula de ciudadania:");
+        System.out.println(feriaUno.getEntrada().getCedula());
+        System.out.println("Menor de edad:");
+        System.out.println(feriaUno.getEntrada().getMenorDeEdad());
     }
-    }
+  
+}
