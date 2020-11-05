@@ -144,6 +144,7 @@ private boolean getInternacional() {
         System.out.println(feriaUno.getEntrada().getCedula());
         System.out.println("Menor de edad:");
         System.out.println(feriaUno.getEntrada().getMenorDeEdad());
+        
     }
   
 }
